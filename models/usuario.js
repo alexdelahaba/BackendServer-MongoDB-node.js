@@ -23,6 +23,7 @@ var usuarioSchema = new Schema({
     default: "USER_ROLE",
     enum: roleValidos,
   },
+  google: { type: Boolean, required: true, default: false },
 });
 
 usuarioSchema.plugin(uniqueValidator, { message: "{PATH} debe ser único" });
